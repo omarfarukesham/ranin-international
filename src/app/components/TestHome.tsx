@@ -5,6 +5,12 @@
 
 import Link from "next/link";
 import { HeroSection } from "./Hero2";
+import Header2 from "./Header2";
+import About from "./About";
+import AboutCompanySection from "./AboutCompnay";
+import AchievementsSection from "./Achievement";
+import BlogSection from "./Blog";
+import Footer2 from "./Footer2";
 // import { use } from "react";
 
 const BRAND = {
@@ -209,64 +215,7 @@ export default function HomesPage() {
   return (
     <div className="min-h-screen w-full bg-white text-slate-900 antialiased px-0 py-0 mx-0">
       {/* Top bar */}
-      <div className="border-b border-slate-200/70 bg-white">
-        <div className="mx-auto flex  items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            {/* Simple brand mark (replace with your logo image if you want) */}
-            <div
-              className="grid h-10 w-10 place-items-center rounded-xl text-white shadow-sm"
-              style={{ backgroundColor: BRAND.primary }}
-              aria-hidden="true"
-            >
-              <span className="text-sm font-semibold">RI</span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-sm font-semibold tracking-tight">
-                Ranin International
-              </div>
-              <div className="text-xs text-slate-500">
-                Industrial Support • Supply • Services
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden items-center gap-7 md:flex">
-            <a
-              href="#services"
-              className="text-sm text-slate-600 hover:text-slate-900"
-            >
-              Services
-            </a>
-            <a
-              href="#why"
-              className="text-sm text-slate-600 hover:text-slate-900"
-            >
-              Why us
-            </a>
-            <a
-              href="#faq"
-              className="text-sm text-slate-600 hover:text-slate-900"
-            >
-              FAQ
-            </a>
-            <a
-              href="#contact"
-              className="rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95"
-              style={{ backgroundColor: BRAND.accent }}
-            >
-              Request a Quote
-            </a>
-          </div>
-
-          <a
-            href="#contact"
-            className="md:hidden rounded-xl px-3 py-2 text-sm font-semibold text-white shadow-sm"
-            style={{ backgroundColor: BRAND.accent }}
-          >
-            Quote
-          </a>
-        </div>
-      </div>
+      <Header2 />
 
       {/* Hero */}
       <section className="bg-[#13496C] text-white">
@@ -275,8 +224,17 @@ export default function HomesPage() {
         </div>
       </section>
 
+      <section className="border-t border-slate-200/70 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
+          <AboutCompanySection />
+        </div>
+      </section>
+
       {/* Services */}
-      <section id="services" className="border-t border-slate-200/70 bg-white">
+      <section
+        id="services"
+        className="border-t border-slate-200/70 bg-slate-100"
+      >
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -330,8 +288,19 @@ export default function HomesPage() {
         </div>
       </section>
 
+      <section className="border-t border-slate-200/70 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <AchievementsSection />
+        </div>
+      </section>
+      <section className="border-t border-slate-200/70 bg-slate-100">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <BlogSection />
+        </div>
+      </section>
+
       {/* Why us */}
-      <section id="why" className="border-t border-slate-200/70 bg-slate-50">
+      {/* <section id="why" className="border-t border-slate-200/70 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
@@ -423,10 +392,10 @@ export default function HomesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
-      <section id="faq" className="border-t border-slate-200/70 bg-white">
+      {/* <section id="faq" className="border-t border-slate-200/70 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
@@ -491,7 +460,7 @@ export default function HomesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact */}
       <section id="contact" className="border-t border-slate-200/70 bg-white">
@@ -587,96 +556,7 @@ export default function HomesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200/70 bg-[#13496C] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div>
-              <div className="flex items-center gap-3">
-                <div
-                  className="grid h-10 w-10 place-items-center rounded-xl text-white shadow-sm"
-                  style={{ backgroundColor: BRAND.primary }}
-                  aria-hidden="true"
-                >
-                  <span className="text-sm font-semibold">RI</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-slate-900">
-                    Ranin International
-                  </div>
-                  <div className="text-xs text-slate-500">
-                    Professional industrial services & supply
-                  </div>
-                </div>
-              </div>
-              <p className="mt-4 max-w-sm text-sm text-slate-600">
-                Built for clarity, trust, and modern corporate
-                presentation—based on your brand colors.
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div>
-                <div className="text-sm font-semibold text-slate-900">
-                  Company
-                </div>
-                <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                  <li>
-                    <a href="#services" className="hover:text-slate-900">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#why" className="hover:text-slate-900">
-                      Why us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#faq" className="hover:text-slate-900">
-                      FAQ
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-slate-900">
-                  Contact
-                </div>
-                <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                  <li>
-                    <a
-                      href="mailto:info@ranininternational.com"
-                      className="hover:text-slate-900"
-                    >
-                      info@ranininternational.com
-                    </a>
-                  </li>
-                  <li className="text-slate-500">Saudi Arabia</li>
-                  <li>
-                    <a href="#contact" className="hover:text-slate-900">
-                      Request a quote
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <div className="text-sm font-semibold text-slate-900">
-                Design tips
-              </div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>• Replace demo text with real service details.</li>
-                <li>• Add project photos and client industries for trust.</li>
-                <li>• Keep red only for key CTAs & highlights.</li>
-              </ul>
-              <div className="mt-5 text-xs text-slate-500">
-                © {new Date().getFullYear()} Ranin International. All rights
-                reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer2 />
 
       {/* Floating quick action (optional) */}
       <div className="fixed bottom-5 right-5 z-50">
