@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "appointmently",
-  description: "the simplest appointment scheduler",
+  title: "Ranin International",
+  description:
+    "Ranin International - Dedicated to delivering reliable industrial support.",
 };
 
 export default function RootLayout({
